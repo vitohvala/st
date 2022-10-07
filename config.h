@@ -5,11 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=15:antialias=true:autohint=true";
+
 /* Spare fonts */
 static char *font2[] = {
-/*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+	"Inconsolata Regular Nerd Font Mono:pixelsize=15:antialias=true:autohint=true"
 };
 
 static int borderpx = 2;
@@ -100,29 +100,29 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.75;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
 
+	/* 8 normal colors */
+        [0] = "#123e7c",
+	[1] = "#ff0000",
+	[2] = "#f56207",
+	[3] = "#f57800",
+	[4] = "#123e7c",
+	[5] = "#f57800",
+	[6] = "#0abdc6",
+	[7] = "#d7d7d5",
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+        [8] = "#1c61c2",
+	[9] = "#ff0000",
+	[10] = "#f56207",
+	[11] = "#f57800",
+	[12] = "#00ff00",
+	[13] = "#f56207",
+	[14] = "#0abdc6",
+	[15] = "#d7d7d5",
 
 	[255] = 0,
 
@@ -185,6 +185,8 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
+	{ 0,                    Button4, kscrollup,      {.i = 1} },
+	{ 0,                    Button5, kscrolldown,    {.i = 1} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
