@@ -11,6 +11,7 @@ static char *font = "Liberation Mono:pixelsize=15:antialias=true:autohint=true";
 static char *font2[] = {
 	"Hack Nerd Font:pixelsize=15:antialias=true:autohint=true",
 	"Symbola:pixelsize=15:antialias=true:autohint=true",
+    "Symbols-2048-em Nerd Font:pixelsize=15:antialias=true:autohint=true"
 };
 static int borderpx = 2;
 
@@ -100,29 +101,29 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.75;
+float alpha = 0.70;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
 	/* 8 normal colors */
-        [0] = "#123e7c",
-	[1] = "#ff0000",
-	[2] = "#f56207",
-	[3] = "#f57800",
-	[4] = "#123e7c",
-	[5] = "#f57800",
-	[6] = "#0abdc6",
-	[7] = "#d7d7d5",
+    [0]  = "black",
+	[1]  = "#98971a",
+	[2]  = "#e80f0f",
+	[3]  = "#d79921",
+	[4]  = "#458588",
+	[5]  = "#b16286",
+	[6]  = "#689d81",
+	[7]  = "#a89984",
 	/* 8 bright colors */
-        [8] = "#1c61c2",
-	[9] = "#ff0000",
-	[10] = "#f56207",
-	[11] = "#f57800",
-	[12] = "#00ff00",
-	[13] = "#f56207",
-	[14] = "#0abdc6",
-	[15] = "#d7d7d5",
+    [8]  = "#928374",
+	[9]  = "#b8bb26",
+	[10] = "#cc241d",
+	[11] = "#fabd2f",
+	[12] = "#83a598",
+	[13] = "#d3879b",
+	[14] = "#8ec07c",
+	[15] = "#ebdbb2",
 
 	[255] = 0,
 
@@ -138,9 +139,9 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 0;
+unsigned int defaultcs = 15;
 static unsigned int defaultrcs = 257;
 
 /*
