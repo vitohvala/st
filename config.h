@@ -23,7 +23,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/usr/bin/zsh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -81,7 +81,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "st";
 
 /*
  * spaces per tab
@@ -105,11 +105,10 @@ float alpha = 0.70;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-
 	/* 8 normal colors */
     [0]  = "black",
-	[1]  = "#98971a",
-	[2]  = "#e80f0f",
+	[1]  = "#e80f0f",
+	[2]  = "#98971a",
 	[3]  = "#d79921",
 	[4]  = "#458588",
 	[5]  = "#b16286",
@@ -117,8 +116,8 @@ static const char *colorname[] = {
 	[7]  = "#a89984",
 	/* 8 bright colors */
     [8]  = "#928374",
-	[9]  = "#b8bb26",
-	[10] = "#cc241d",
+	[9]  = "#cc241d",
+	[10] = "#b8bb26",
 	[11] = "#fabd2f",
 	[12] = "#83a598",
 	[13] = "#d3879b",
